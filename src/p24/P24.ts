@@ -127,7 +127,7 @@ export class P24 {
             const { data } = await this.client.get(EndpointTestAccess)
             const res = <SuccessResponse<boolean>>data
             return res.data === true
-        } catch (error) {
+        } catch (error: any) {
             if (error.response && error.response.data) {
                 const resp = <ErrorResponse<string>>error.response.data
                 throw new P24Error(resp.error, resp.code)
@@ -170,7 +170,7 @@ export class P24 {
             }
 
             return transaction
-        } catch (error) {
+        } catch (error: any) {
             if (error.response && error.response.data) {
                 const resp = <ErrorResponse<string>>error.response.data
                 throw new P24Error(resp.error, resp.code)
@@ -209,7 +209,7 @@ export class P24 {
             const { data } = await this.client.put(EndpointTransactionVerify, verificationData)
             const result = <SuccessResponse<VerificationData>>data
             return result.data.status === 'success'
-        } catch (error) {
+        } catch (error: any) {
             if (error.response && error.response.data) {
                 const resp = <ErrorResponse<string>>error.response.data
                 throw new P24Error(resp.error, resp.code)
@@ -247,7 +247,7 @@ export class P24 {
             const { data } = await this.client.post(EndpointRefund, refundRequest)
             const resp = <SuccessResponse<RefundResult[]>>data
             return resp.data
-        } catch (error) {
+        } catch (error: any) {
             if (error.response && error.response.data) {
                 if (error.response.data.code === 409) {
                     const resp = <ErrorResponse<RefundResult[]>>error.response.data

@@ -1,3 +1,5 @@
+# THIS IS A FORK OF @ingameltd/node-przelewy24 WITH UPDATED DEPENDENCIES. ALL CREDIT GOES TO ORIGINAL AUTHORS.
+
 # Przelewy24 for NodeJS
 
 ![Build](https://github.com/ingameltd/node-przelewy24/workflows/Build/badge.svg) ![](https://img.shields.io/github/license/ingameltd/node-przelewy24) ![](https://img.shields.io/npm/v/@ingameltd/node-przelewy24) ![](https://img.shields.io/github/last-commit/ingameltd/node-przelewy24)
